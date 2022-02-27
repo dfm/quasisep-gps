@@ -12,3 +12,10 @@ module showyourwork:
 
 # Use all default rules
 use rule * from showyourwork
+
+use rule figure from showyourwork as mandelbrot with:
+    input:
+        "src/figures/mandelbrot.py",
+        "environment.yml"
+    output:
+        "src/figures/mandelbrot.pdf"
